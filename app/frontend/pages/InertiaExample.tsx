@@ -1,9 +1,6 @@
-import { Head } from '@inertiajs/react'
+import { Head, Link } from '@inertiajs/react'
 import { useState } from 'react'
 
-import inertiaSvg from '/assets/inertia.svg'
-import reactSvg from '/assets/react.svg'
-import viteRubySvg from '/assets/vite_ruby.svg'
 import { Button } from "@/components/ui/button"
 
 import cs from './InertiaExample.module.css'
@@ -19,23 +16,19 @@ export default function InertiaExample({ name }: { name: string }) {
         <h1 className={cs.h1}>Hello {name}!</h1>
 
         <div>
-          <a href="https://inertia-rails.dev" target="_blank">
-            <img className={cs.logo} src={inertiaSvg} alt="Inertia logo" />
-          </a>
-          <a href="https://vite-ruby.netlify.app" target="_blank">
-            <img
-              className={`${cs.logo} ${cs.vite}`}
-              src={viteRubySvg}
-              alt="Vite Ruby logo"
-            />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img
-              className={`${cs.logo} ${cs.react}`}
-              src={reactSvg}
-              alt="React logo"
-            />
-          </a>
+        <Link
+                href="/about-page"
+                className="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+            >
+        O nama
+        </Link>
+        <Link
+                href="/contact-page"
+                className="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+            >
+        Kontakt
+        </Link>
+
         </div>
         <h1 className="text-3xl font-bold underline">
           Hello world!

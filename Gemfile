@@ -33,19 +33,35 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  # Testing
+  gem "rspec-rails"
+
+  # Code Quality
+  gem "strong_migrations"
+  gem "prosopite"
+  gem "pg_query"
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", require: false
-
-  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # Code Quality
+  gem "database_consistency", require: false
+  gem "rails_best_practices", require: false
+  gem "rubocop-shopify", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rspec", require: false
+  gem "rubocop-rspec_rails", require: false
+  gem "rubocop-factory_bot", require: false
+  gem "rubocop-obsession", require: false
+  gem "rubocop-thread_safety", require: false
+  gem "bundler-audit", require: false
+  gem "brakeman", require: false
+  gem "lefthook", require: false
+  gem "fasterer", require: false
 end
 
 group :test do
